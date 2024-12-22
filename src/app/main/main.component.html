@@ -1,0 +1,528 @@
+<div id="app" class="app off-canvas">
+   <!-- main-container -->
+   <div class="main-container clearfix">
+     <!-- main-navigation -->
+     <!-- <app-sidebar></app-sidebar> -->
+     <!-- #end main-navigation -->
+
+     <!-- content-here -->
+     <div class="content-container" id="content">
+       <!-- dashboard page -->
+       <div class="page page-dashboard">
+         <div class="page-wrap">
+
+           <!-- mini boxes -->
+           <div class="row">
+             <div class="col-md-3 col-sm-6">
+               <div class="panel panel-default mb20 mini-box panel-hovered">
+                 <div class="panel-body">
+                   <div class="clearfix">
+                     <div class="info left">
+                       <h4
+                         class="mt0 text-blue text-bold"
+                         id="documentCountDisplay"
+                       >30</h4>
+                       <!-- <h5 class="class=mt0 text-info text-bold" id="documentCountDisplay"></h5> -->
+                       <h5 class="text-light mb0">Documents</h5>
+                     </div>
+                     <div class="right ion">
+                        <img src="../../assets/fonts/cartIcon1.png" alt="Documents-icon"/>
+                     </div>
+                   </div>
+                 </div>
+                 <div
+                   class="panel-footer clearfix panel-footer-sm panel-footer-primary"
+                 >
+                   <p class="mt0 mb0 left">Count</p>
+                 </div>
+               </div>
+             </div>
+
+             <div class="col-md-3 col-sm-6">
+               <div class="panel panel-default mb20 mini-box panel-hovered custom-margin-bottom">
+                 <div class="panel-body-tags">
+                   <div class="clearfix">
+                     <div class="info left">
+                       <h4
+                         class="mt0 text-green text-bold"
+                         id="equipmentCountDisplay"
+                       >21</h4>
+                       <h5 class="text-light mb0">Tags</h5>
+                     </div>
+                     <div class="right ion icon">
+                        <img src="../../assets/fonts/cartIcon2.png" alt="Tags-icon"/>
+                     </div>
+                   </div>
+                 </div>
+                 <div
+                   class="panel-footer clearfix panel-footer-sm panel-footer-success"
+                 >
+                   <p class="mt0 mb0 left">Count</p>
+                 </div>
+               </div>
+             </div>
+
+             <div class="col-md-3 col-sm-6">
+               <div class="panel panel-default mb20 mini-box panel-hovered">
+                 <div class="panel-body">
+                   <div class="clearfix">
+                     <div class="info left">
+                       <h4 class="mt0 text-orange text-bold">25</h4>
+                       <h5 class="text-light mb0">Workflow</h5>
+                     </div>
+                     <div class="right ion">
+                        <img src="../../assets/fonts/cartIcon3.png" alt="Documents-icon"/>
+                     </div>
+                   </div>
+                 </div>
+                 <div
+                   class="panel-footer clearfix panel-footer-sm panel-footer-info"
+                 >
+                   <p class="mt0 mb0 left">Count</p>
+                 </div>
+               </div>
+             </div>
+
+             <div class="col-md-3 col-sm-6">
+               <div class="panel panel-default mb20 mini-box panel-hovered">
+                 <div class="panel-body">
+                   <div class="clearfix">
+                     <div class="info left">
+                       <h4 class="mt0 text-red text-bold">28</h4>
+                       <h5 class="text-light mb0">Tag Relation</h5>
+                     </div>
+                     <div
+                       class="right ion"
+                     >
+                     <img src="../../assets/fonts/cartIcon4.png" alt="Documents-icon"/>
+                    </div>
+                   </div>
+                 </div>
+                 <div
+                   class="panel-footer clearfix panel-footer-sm panel-footer-pink"
+                 >
+                   <p class="mt0 mb0 left">Count</p>
+                 </div>
+               </div>
+             </div>
+             <!-- #end mini boxes -->
+           </div>
+           <!-- #end row -->
+
+           <div class="chart-container">
+            <!-- Bar Chart -->
+            <div class="chart-wrapper">
+              <div class="chart-box">
+                
+                <!-- <p>Documents</p> -->
+                <div class="chart-header">
+                    <div class="search-box">
+                      <input type="text" placeholder="DOCUMENTS..." />
+                      <i class="fa fa-search search-icon"></i>
+                    </div>
+                    <div class="bar-chart-list p-2">
+                      <select>
+                        <option value="chart1">BAR CHART</option>
+                        <option value="chart2">BAR CHART 2</option>
+                        <option value="chart3">BAR CHART 3</option>
+                      </select>
+                    </div>
+                  </div>
+                <!-- <div class="chart-info">Documents</div> -->
+                <canvas id="barChart"></canvas>
+                <div class="chart-label">Doc Type</div>
+              </div>
+            </div>
+          
+            <!-- Line Chart -->
+            <div class="chart-wrapper">
+              <div class="chart-box">
+                
+                <!-- <p>Tags</p> -->
+                <div class="chart-header">
+                    <div class="search-box">
+                      <input type="text" placeholder="TAGS..." />
+                      <i class="fa fa-search search-icon-tags"></i>
+                    </div>
+                    <div class="bar-chart-list p-2">
+                      <select>
+                        <option value="chart1">LINE CHART</option>
+                        <option value="chart2">LINE CHART 2</option>
+                        <option value="chart3">LINE CHART 3</option>
+                      </select>
+                    </div>
+                </div>
+                <!-- <div class="chart-info2">Tags</div> -->
+                <canvas id="lineChart"></canvas>
+                <div class="chart-label">Tag Type</div>
+              </div>
+            </div>
+          </div>
+           
+        <div class="row">
+
+            <!-- profile -->
+            <div class="col-md-4 col-sm-6">
+                <div class="panel panel-default mb20 panel-hovered profile-widget">
+                    <div class="panel-body">
+                        <div class="clearfix mb15 top-info">
+                            <div class="left-side">
+                                <h2 class="text-light mt0">Tag Relation</h2>
+                                <p><strong>About:&nbsp;</strong>Relationship Between Tags and Documents</p>
+                            </div>
+                            <div class="right-side">
+                                <img src="../../assets/images/tag.png" alt="tag">
+                            </div>
+                        </div>
+                        <ul class="user-badges list-unstyled row">
+                            <li class="col-xs-4">
+                                <img src="../../assets/fonts/TagRltn1.svg" alt="Tag Relation" class="icon-tagRelation"/>
+                                <strong>192</strong>
+                                <button class="btn btn-success btn-xs mt15">Equepment</button>
+                            </li>
+                            <li class="col-xs-4">
+                                <img src="../../assets/fonts/TagRltn2.svg" alt="Tag Relation" class="icon-tagRelation"/>
+                                <strong>5K+</strong>
+                                <button class="btn btn-info btn-xs mt15">Instruments</button>
+                            </li>
+                            <li class="col-xs-4">
+                                <img src="../../assets/fonts/TagRltn3.svg" alt="Tag Relation" class="icon-tagRelation"/>
+                                <strong>32</strong>
+                                <button class="btn btn-primary btn-xs mt15">Pipelines</button>
+                            </li>
+                        </ul>
+                    </div> <!-- #end panel-body -->
+                </div>
+            </div>
+
+            <!-- browser share -->
+            <div class="col-md-4 col-sm-6">
+                <div class="panel panel-default mb20 panel-hovered">
+                    <div class="panel-heading">
+                        <div class="chart-header">
+                            <div class="doughnut-search-box">
+                              <span class="text">FILES</span>
+                            </div>
+                            <div class="bar-chart-list p-2">
+                              <select>
+                                <option value="chart1">DOUGHNUT CHART</option>
+                                <option value="chart2">DOUGHNUT CHART 2</option>
+                                <option value="chart3">DOUGHNUT CHART 3</option>
+                              </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body text-center">
+                        <!-- <div id="c3chartbrowsershare"></div> -->
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- list widgets -->
+            <div class="col-md-4 col-sm-12">
+                <div class="panel panel-default mb20 list-widget">
+                    <ul class="list-unstyled clearfix">
+                        <li>
+                            <!-- <i class="fa fa-file-o"></i> -->
+                            <img src="../../assets/fonts/‌listicn1.svg" alt="">
+                            <span class="text">File List</span>
+                            <span class="badge badge-xs badge-primary right">100</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/‌listicn2.svg" alt="">
+                            <span class="text">Documents</span>
+                            <span class="badge badge-xs badge-info right">40+</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/list3.1.svg" alt="">
+                            <span class="text">Tags</span>
+                            <span class="badge badge-xs badge-success right">22</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/‌listicn3.svg" alt="">
+                            <span class="text">Tag Relation</span>
+                            <span class="badge badge-xs badge-danger right">80%</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/‌listicn4.svg" alt="">
+                            <span class="text">Workflows</span>
+                            <span class="badge badge-xs badge-info circle right">5</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/‌listicn5.svg" alt="">
+                            <span class="text">Document Types</span>
+                            <span class="badge badge-xs circle badge-warning right">2</span>
+                        </li>
+                        <li>
+                            <img src="../../assets/fonts/‌listicn6.svg" alt="">
+                            <span class="text">Tag Types</span>
+                            <span class="badge badge-xs circle badge-danger right">8</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+             
+         </div>
+         <!-- #end page-wrap -->
+     </div>
+     <!-- #end dashboard page -->
+   </div>
+   <!-- #end main-container -->
+
+   
+    <!-- theme settings -->
+    <div class="site-settings clearfix hidden-xs">
+        <div class="settings clearfix">
+          <div class="trigger ion ion-settings left"></div>
+          <div class="wrapper left">
+            <ul class="list-unstyled other-settings">
+              <li class="clearfix mb10">
+                <div class="left small">Nav Horizontal</div>
+                <div class="md-switch right">
+                  <label>
+                    <input type="checkbox" id="navHorizontal" />
+                    <span>&nbsp;</span>
+                  </label>
+                </div>
+              </li>
+              <li class="clearfix mb10">
+                <div class="left small">Fixed Header</div>
+                <div class="md-switch right">
+                  <label>
+                    <input type="checkbox" id="fixedHeader" />
+                    <span>&nbsp;</span>
+                  </label>
+                </div>
+              </li>
+              <li class="clearfix mb10">
+                <div class="left small">Nav Full</div>
+                <div class="md-switch right">
+                  <label>
+                    <input type="checkbox" id="navFull" />
+                    <span>&nbsp;</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+            <hr />
+            <ul class="themes list-unstyled" id="themeColor">
+              <li data-theme="theme-zero" class="active"></li>
+              <li data-theme="theme-one"></li>
+              <li data-theme="theme-two"></li>
+              <li data-theme="theme-three"></li>
+              <li data-theme="theme-four"></li>
+              <li data-theme="theme-five"></li>
+              <li data-theme="theme-six"></li>
+              <li data-theme="theme-seven"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- #end theme settings -->
+  
+      <!-- Include Chart.js Library -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        window.onload = function () {
+          // Fetch data and populate tables
+          fetchExcelData("documents.xlsx", "documents");
+          fetchExcelData("equipments.xlsx", "equipments");
+      
+          // Delay to ensure data is loaded before updating counts and charts
+          setTimeout(() => {
+            displayCounts();
+            createCharts();
+            createDocumentsPieChart();  // Call the function to create the pie chart
+          }, 500); // Adjust delay as necessary based on file size
+        };
+      
+        // Function to fetch Excel data automatically
+        function fetchExcelData(filename, type) {
+          fetch(filename)
+            .then((response) => response.arrayBuffer())
+            .then((data) => {
+              const workbook = XLSX.read(data, { type: "array" });
+              const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { header: 1 });
+              sessionStorage.setItem(`${type}Data`, JSON.stringify(sheet));
+      
+              if (type === "documents") populateDocumentsTable(sheet);
+              if (type === "equipments") populateEquipmentsTable(sheet);
+            })
+            .catch((err) => console.error(`Failed to load ${filename}:`, err));
+        }
+      
+        // Function to create charts
+        function createCharts() {
+          const documentsData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
+          const equipmentsData = JSON.parse(sessionStorage.getItem("equipmentsData") || "[]");
+      
+          // Bar chart for documents
+          if (documentsData.length > 1) {
+            const documentTypeColumnIndex = documentsData[0].indexOf("documenttype2");
+            if (documentTypeColumnIndex !== -1) {
+              const counts = {};
+              documentsData.slice(1).forEach((row) => {
+                const type = row[documentTypeColumnIndex];
+                if (type) counts[type] = (counts[type] || 0) + 1;
+              });
+      
+              const labels = Object.keys(counts);
+              const data = Object.values(counts);
+      
+              const ctx = document.getElementById("documentsChart").getContext("2d");
+              new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,  // Labels for the X-axis (e.g., document types)
+      datasets: [{
+        label: "Document Types", 
+        data,  // Data points corresponding to the labels
+        backgroundColor: "rgba(54, 162, 235, 0.5)",  // Bar color
+      }],
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          title: {
+            display: true,  // Enable title for X axis
+            text: 'Doc Type',  // Label text for X axis
+          },
+        },
+        y: {
+          beginAtZero: true,  // Ensure Y axis starts at zero
+          title: {
+            display: true,  // Enable title for Y axis
+            text: 'Documents',  // Label text for Y axis
+          },
+        },
+      },
+    },
+  });
+  
+            }
+          }
+      
+          // Bar chart for equipments
+          if (equipmentsData.length > 1) {
+            const equipmentTypeColumnIndex = equipmentsData[0].indexOf("EquipmentType");
+            if (equipmentTypeColumnIndex !== -1) {
+              const counts = {};
+      
+              equipmentsData.slice(1).forEach((row) => {
+                const equipmentType = row[equipmentTypeColumnIndex];
+                if (equipmentType) {
+                  counts[equipmentType] = (counts[equipmentType] || 0) + 1;
+                }
+              });
+      
+              const labels = Object.keys(counts);
+              const data = Object.values(counts);
+      
+              const ctx = document.getElementById("equipmentsChart").getContext("2d");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,  // Data labels (e.g., document types)
+      datasets: [{
+        label: "Tag Types",  
+        data,  // Data points corresponding to the labels
+        backgroundColor: "rgba(54, 162, 235, 0.5)",  // Bar color
+      }],
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          title: {
+            display: true,  // Enable title for X axis
+            text: 'Tags Types',  // Customize the label text for the X axis
+          },
+        },
+        y: {
+          beginAtZero: true,  // Ensure Y axis starts at zero
+          title: {
+            display: true,  // Enable title for Y axis
+            text: 'Tag',  // Customize the label text for the Y axis
+          },
+        },
+      },
+    },
+  });
+  
+            }
+          }
+        }
+      
+  // Pie chart
+  function createDocumentsPieChart() {
+    const documentsData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
+  
+    if (documentsData.length > 1) {
+      const documentTypeColumnIndex = documentsData[0].indexOf("documenttype");
+  
+      if (documentTypeColumnIndex !== -1) {
+        const counts = {};
+  
+        // Loop through rows and count occurrences of each DocumentType
+        documentsData.slice(1).forEach((row) => {
+          const documentType = row[documentTypeColumnIndex];
+          if (documentType) {
+            // Sum up the counts for the same document type
+            counts[documentType] = (counts[documentType] || 0) + 1;
+          }
+        });
+  
+        const labels = Object.keys(counts);  // Document types
+        const data = Object.values(counts);  // Count for each document type
+  
+        const ctx = document.getElementById("documentTypePieChart").getContext("2d");
+  
+        new Chart(ctx, {
+          type: "pie",
+          data: {
+            labels,  // Document types
+            datasets: [{
+              data,  // Count of each document type
+              backgroundColor: [
+                "rgba(54, 162, 235, 0.5)",
+                "rgba(255, 99, 132, 0.5)",
+                "rgba(75, 192, 192, 0.5)",
+                "rgba(153, 102, 255, 0.5)",
+                "rgba(255, 159, 64, 0.5)",
+              ],
+            }],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false,  // Hide the legend
+              },
+            },
+          },
+        });
+      }
+    }
+  }
+  
+      
+        // Display counts for documents and equipments
+        function displayCounts() {
+          const documentData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
+          const equipmentData = JSON.parse(sessionStorage.getItem("equipmentsData") || "[]");
+      
+          const documentCount = documentData.length > 1 ? documentData.length - 1 : 0;
+          const equipmentCount = equipmentData.length > 1 ? equipmentData.length - 1 : 0;
+      
+          document.getElementById("documentCountDisplay").textContent = documentCount || 0;
+          document.getElementById("equipmentCountDisplay").textContent = equipmentCount || 0;
+        }
+      </script>
+      
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+</div>

@@ -1,0 +1,394 @@
+.custom-margin-bottom {
+    margin-bottom: 18px; /* Reduced bottom margin by 2px */
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  
+  .chart-wrapper {
+    width: 49%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  
+  .chart-box {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding-left: 40px;
+    overflow: hidden;
+  }
+
+  .chart-info {
+    position: absolute;
+    left: 20px; /* Position inside the box */
+    top: 63%; /* Center vertically */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+    z-index: 1; /* Ensure it stays on top of the chart */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .chart-info2 {
+    position: absolute;
+    left: 565px; /* Position inside the box */
+    top: 63%; /* Center vertically */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+    z-index: 1; /* Ensure it stays on top of the chart */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .chart-title2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+  }
+  
+  .chart-label {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+  }
+  
+  .footer-label {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18.86px;
+    padding-top: 10px;
+  }  
+
+
+.chart-header {
+    display: flex;
+    justify-content: space-between; /* Align items side by side */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Optional: Add a divider */
+  }
+
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    width: 250px; /* Set the desired width */
+    height: 30px;
+    padding: 8px 12px;
+    padding-right: 30px; /* Add padding to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-box input:focus {
+    border-color: #007bff; /* Change border color on focus */
+  }
+  
+  .search-box .search-icon {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    pointer-events: none; /* Ensure the icon does not block input interactions */
+  }
+
+  .search-box .search-icon-tags {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    pointer-events: none; /* Ensure the icon does not block input interactions */
+  }
+ 
+  .bar-chart-list select {
+    width: 180px; /* Adjust width as needed */
+    height: 30px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .bar-chart-list select:focus {
+    border-color: #007bff;
+  }
+
+  .row > .col-md-4,
+    .row > .col-sm-6,
+    .row > .col-sm-12 {
+    margin-top: 10px; 
+    }
+
+ .left-side p {
+    margin-bottom: 75px;
+  }
+
+  .list-widget .list-unstyled li .text {
+    padding-left: 7px; 
+  }
+
+
+  
+  .custom-margin-bottom {
+    margin-bottom: 18px; /* Reduced bottom margin by 2px */
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  
+  .chart-wrapper {
+    width: 49%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  
+  .chart-box {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding-left: 40px;
+    overflow: hidden;
+  }
+
+  .chart-info {
+    position: absolute;
+    left: 20px; /* Position inside the box */
+    top: 63%; /* Center vertically */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+    z-index: 1; /* Ensure it stays on top of the chart */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .chart-info2 {
+    position: absolute;
+    left: 565px; /* Position inside the box */
+    top: 63%; /* Center vertically */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+    z-index: 1; /* Ensure it stays on top of the chart */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .chart-title2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+  }
+  
+  .chart-label {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+  }
+  
+  .footer-label {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18.86px;
+    padding-top: 10px;
+  }  
+
+
+.chart-header {
+    display: flex;
+    justify-content: space-between; /* Align items side by side */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Optional: Add a divider */
+  }
+
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    width: 250px; /* Set the desired width */
+    height: 30px;
+    padding: 8px 12px;
+    padding-right: 30px; /* Add padding to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-box input:focus {
+    border-color: #007bff; /* Change border color on focus */
+  }
+  
+  .search-box .search-icon {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    pointer-events: none; /* Ensure the icon does not block input interactions */
+  }
+
+  .search-box .search-icon-tags {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    pointer-events: none; /* Ensure the icon does not block input interactions */
+  }
+ 
+  .bar-chart-list select {
+    width: 180px; /* Adjust width as needed */
+    height: 30px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .bar-chart-list select:focus {
+    border-color: #007bff;
+  }
+
+  .row > .col-md-4,
+    .row > .col-sm-6,
+    .row > .col-sm-12 {
+    margin-top: 10px; 
+    }
+
+ .left-side p {
+    margin-bottom: 75px;
+  }
+
+  .list-widget .list-unstyled li .text {
+    padding-left: 7px; 
+  }
+
+
+  
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .col-xs-4 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .chart-wrapper {
+      width: 100%;
+    }
+  
+    .chart-info, .chart-info2 {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+  
+  /* Small devices (tablets, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .col-sm-6 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .chart-wrapper {
+      width: 100%;
+    }
+  
+    .chart-info, .chart-info2 {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+  
+  /* Medium devices (desktops, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .col-md-4 {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  
+    .chart-wrapper {
+      width: 49%;
+    }
+  
+    .chart-info, .chart-info2 {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+  
+  /* Large devices (large desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .col-md-4 {
+      width: 33.33%;
+      margin-bottom: 10px;
+    }
+  
+    .chart-wrapper {
+      width: 49%;
+    }
+  
+    .chart-info, .chart-info2 {
+      left: 20px;
+      top: 63%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }

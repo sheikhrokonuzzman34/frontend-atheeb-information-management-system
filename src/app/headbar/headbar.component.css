@@ -1,0 +1,107 @@
+.site-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .toolbar-left, .toolbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* .menuIcn .icon-button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+   */
+  .title-container .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-left: 165px;
+  }
+  
+  .example-spacer {
+    flex: 1;
+  }
+  
+  /* .icon-button img {
+    height: 24px;
+    width: 24px;
+    background: none; 
+    border: none; 
+  } */
+
+.notifyicon{
+    height: 24px;
+    width: 24px;
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+}
+
+.accounticon {
+    height: 24px;
+    width: 24px;
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+}
+
+.icon-button {
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .icon-button img {
+    height: 24px;
+    width: 24px;
+  }
+
+  @media (max-width: 767.98px) {
+    .site-head {
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .title-container .title {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+  
+    .header-logo .logo {
+      height: 30px;
+      margin-right: 5px;
+    }
+  
+    .toolbar-left, .toolbar-right {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .icon-button {
+      padding: 2px;
+    }
+  
+    .icon-button img {
+      height: 20px;
+      width: 20px;
+    }
+  }

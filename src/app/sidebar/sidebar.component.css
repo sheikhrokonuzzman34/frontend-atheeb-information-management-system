@@ -1,0 +1,205 @@
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 20px;
+  }
+
+.user-name {
+    color: #464646;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 6px;
+  }
+  
+  .user-role {
+    font-size: 12px;
+    font-weight: 400;
+    color: #464646;
+  }
+
+  .icon {
+    margin-left: 15px;
+  }
+
+  /* Reset default styles for list items */
+.inner-drop li {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    padding: 2px 15px; /* Add spacing for items */
+  }
+  
+  /* Style for the icon */
+  .inner-drop li img.icon {
+    width: 16px; /* Fixed width for the icon */
+    height: 16px; /* Fixed height for the icon */
+    margin-left: 40px; /* Add space between icon and text */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+  }
+  
+  /* Style for the anchor tag */
+  .inner-drop li a {
+    text-decoration: none;
+    color: #888888; /* Default text color */
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  /* Optional hover effect for links */
+  .inner-drop li a:hover {
+    color: #000; /* Change text color on hover */
+  }
+  
+  /* Parent list styling */
+  .inner-drop {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Top-level menu styling */
+  .inner-drop > li {
+    padding: 5px 0; /* Add vertical spacing between items */
+  }
+  
+  .text-tag {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-left: 22px;
+  }
+
+  .text-data {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-left: 26px;
+  }
+
+  .text-integration {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-left: 23px;
+    /* padding : 7px 7px; */
+  }
+
+  .text-workflow {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-left: 23px;
+    /* padding : 7px 7px; */
+  }
+
+  .text-admin {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-left: 23px;
+    /* padding : 7px 7px; */
+  }
+
+  .text-help {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-left: 23px;
+    /* padding : 7px 7px; */
+  }
+
+  .text-about {
+    color: #464646;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.86px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin-left: 23px;
+    /* padding : 7px 7px; */
+  }
+
+  .list-data {
+    height: 49px;
+    margin-top: 10px;
+  }
+
+  .list-integration {
+    height: 49px;
+    /* margin-top: 10px; */
+  }
+
+  .list-workflow {
+    height: 49px;
+    /* margin-top: 10px; */
+  }
+
+  .list-admin {
+    height: 49px;
+    /* margin-top: 10px; */
+  }
+
+  .list-help {
+    height: 49px;
+    /* margin-top: 10px; */
+  }
+
+  .list-about {
+    height: 49px;
+    /* margin-top: 10px; */
+  }
+
+  @media (max-width: 767.98px) {
+    .sidebar-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .inner-drop li {
+      padding: 10px;
+    }
+  
+    .text-tag, .text-data, .text-integration, .text-workflow, .text-admin, .text-help, .text-about {
+      margin-left: 10px;
+    }
+  }

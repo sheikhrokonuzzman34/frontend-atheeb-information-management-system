@@ -6,8 +6,52 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css" />
+  <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" />
+    <!-- Plugins -->
+    <link rel="stylesheet" href="assets/styles/plugins/c3.css" />
+    <link rel="stylesheet" href="assets/styles/plugins/waves.css" />
+    <link rel="stylesheet" href="assets/styles/plugins/perfect-scrollbar.css" />
+
+    <!-- Css/Less Stylesheets -->
+    <!-- build:css styles/bootstrap.min.css -->
+    <link rel="stylesheet" href="assets/styles/vendors/bootstrap.min.css" />
+    <!-- /build -->
+    <!-- build:css styles/main.min.css -->
+    <link rel="stylesheet/less" href="assets/styles/main.less" />
+    <!-- /build -->
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+
+      <!-- Dev only -->
+    <!-- build:remove -->
+    <script src="scripts/dev/less.min.js"></script>
+    <!-- /build -->
+
+    <!-- Vendors -->
+    <!-- build:js scripts/vendors.js -->
+    <script src="assets/scripts/vendors/jquery.min.js"></script>
+    <script src="assets/scripts/vendors/bootstrap.min.js"></script>
+    <!-- /build -->
+    <script src="assets/scripts/plugins/d3.min.js"></script>
+    <script src="assets/scripts/plugins/c3.min.js"></script>
+    <script src="assets/scripts/plugins/screenfull.js"></script>
+    <script src="assets/scripts/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/scripts/plugins/waves.min.js"></script>
+    <script src="assets/scripts/plugins/jquery.sparkline.min.js"></script>
+    <script src="assets/scripts/plugins/jquery.easypiechart.min.js"></script>
+    <script src="assets/scripts/plugins/bootstrap-rating.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    <script src="assets/scripts/index.init.js"></script>
 </body>
 </html>
