@@ -6,7 +6,7 @@
      <!-- #end main-navigation -->
 
      <!-- content-here -->
-     <div class="content-container" id="content">
+    <div class="content-container" id="content">
        <!-- dashboard page -->
        <div class="page page-dashboard">
          <div class="page-wrap">
@@ -18,10 +18,8 @@
                  <div class="panel-body">
                    <div class="clearfix">
                      <div class="info left">
-                       <h4
-                         class="mt0 text-blue text-bold"
-                         id="documentCountDisplay"
-                       >30</h4>
+                        <h4 class="mt0 text-blue text-bold" id="documentCountDisplay">{{ fileCounts.documents || 0 }}</h4>
+
                        <!-- <h5 class="class=mt0 text-info text-bold" id="documentCountDisplay"></h5> -->
                        <h5 class="text-light mb0">Documents</h5>
                      </div>
@@ -43,10 +41,8 @@
                  <div class="panel-body-tags">
                    <div class="clearfix">
                      <div class="info left">
-                       <h4
-                         class="mt0 text-green text-bold"
-                         id="equipmentCountDisplay"
-                       >21</h4>
+                        <h4 class="mt0 text-green text-bold" id="equipmentCountDisplay">{{ fileCounts.tags || 0 }}</h4>
+
                        <h5 class="text-light mb0">Tags</h5>
                      </div>
                      <div class="right ion icon">
@@ -67,7 +63,7 @@
                  <div class="panel-body">
                    <div class="clearfix">
                      <div class="info left">
-                       <h4 class="mt0 text-orange text-bold">25</h4>
+                        <h4 class="mt0 text-orange text-bold">{{ fileCounts.workflow || 0 }}</h4>
                        <h5 class="text-light mb0">Workflow</h5>
                      </div>
                      <div class="right ion">
@@ -88,7 +84,7 @@
                  <div class="panel-body">
                    <div class="clearfix">
                      <div class="info left">
-                       <h4 class="mt0 text-red text-bold">28</h4>
+                        <h4 class="mt0 text-red text-bold">{{ fileCounts.tag_relations || 0 }}</h4>
                        <h5 class="text-light mb0">Tag Relation</h5>
                      </div>
                      <div
@@ -269,9 +265,8 @@
          <!-- #end page-wrap -->
      </div>
      <!-- #end dashboard page -->
-   </div>
-   <!-- #end main-container -->
-
+    </div>
+    <!-- #end main-container -->
    
     <!-- theme settings -->
     <div class="site-settings clearfix hidden-xs">
@@ -325,203 +320,7 @@
   
       <!-- Include Chart.js Library -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        window.onload = function () {
-          // Fetch data and populate tables
-          fetchExcelData("documents.xlsx", "documents");
-          fetchExcelData("equipments.xlsx", "equipments");
-      
-          // Delay to ensure data is loaded before updating counts and charts
-          setTimeout(() => {
-            displayCounts();
-            createCharts();
-            createDocumentsPieChart();  // Call the function to create the pie chart
-          }, 500); // Adjust delay as necessary based on file size
-        };
-      
-        // Function to fetch Excel data automatically
-        function fetchExcelData(filename, type) {
-          fetch(filename)
-            .then((response) => response.arrayBuffer())
-            .then((data) => {
-              const workbook = XLSX.read(data, { type: "array" });
-              const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { header: 1 });
-              sessionStorage.setItem(`${type}Data`, JSON.stringify(sheet));
-      
-              if (type === "documents") populateDocumentsTable(sheet);
-              if (type === "equipments") populateEquipmentsTable(sheet);
-            })
-            .catch((err) => console.error(`Failed to load ${filename}:`, err));
-        }
-      
-        // Function to create charts
-        function createCharts() {
-          const documentsData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
-          const equipmentsData = JSON.parse(sessionStorage.getItem("equipmentsData") || "[]");
-      
-          // Bar chart for documents
-          if (documentsData.length > 1) {
-            const documentTypeColumnIndex = documentsData[0].indexOf("documenttype2");
-            if (documentTypeColumnIndex !== -1) {
-              const counts = {};
-              documentsData.slice(1).forEach((row) => {
-                const type = row[documentTypeColumnIndex];
-                if (type) counts[type] = (counts[type] || 0) + 1;
-              });
-      
-              const labels = Object.keys(counts);
-              const data = Object.values(counts);
-      
-              const ctx = document.getElementById("documentsChart").getContext("2d");
-              new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels,  // Labels for the X-axis (e.g., document types)
-      datasets: [{
-        label: "Document Types", 
-        data,  // Data points corresponding to the labels
-        backgroundColor: "rgba(54, 162, 235, 0.5)",  // Bar color
-      }],
-    },
-    options: {
-      responsive: true,
-      scales: {
-        x: {
-          title: {
-            display: true,  // Enable title for X axis
-            text: 'Doc Type',  // Label text for X axis
-          },
-        },
-        y: {
-          beginAtZero: true,  // Ensure Y axis starts at zero
-          title: {
-            display: true,  // Enable title for Y axis
-            text: 'Documents',  // Label text for Y axis
-          },
-        },
-      },
-    },
-  });
   
-            }
-          }
-      
-          // Bar chart for equipments
-          if (equipmentsData.length > 1) {
-            const equipmentTypeColumnIndex = equipmentsData[0].indexOf("EquipmentType");
-            if (equipmentTypeColumnIndex !== -1) {
-              const counts = {};
-      
-              equipmentsData.slice(1).forEach((row) => {
-                const equipmentType = row[equipmentTypeColumnIndex];
-                if (equipmentType) {
-                  counts[equipmentType] = (counts[equipmentType] || 0) + 1;
-                }
-              });
-      
-              const labels = Object.keys(counts);
-              const data = Object.values(counts);
-      
-              const ctx = document.getElementById("equipmentsChart").getContext("2d");
-  new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels,  // Data labels (e.g., document types)
-      datasets: [{
-        label: "Tag Types",  
-        data,  // Data points corresponding to the labels
-        backgroundColor: "rgba(54, 162, 235, 0.5)",  // Bar color
-      }],
-    },
-    options: {
-      responsive: true,
-      scales: {
-        x: {
-          title: {
-            display: true,  // Enable title for X axis
-            text: 'Tags Types',  // Customize the label text for the X axis
-          },
-        },
-        y: {
-          beginAtZero: true,  // Ensure Y axis starts at zero
-          title: {
-            display: true,  // Enable title for Y axis
-            text: 'Tag',  // Customize the label text for the Y axis
-          },
-        },
-      },
-    },
-  });
-  
-            }
-          }
-        }
-      
-  // Pie chart
-  function createDocumentsPieChart() {
-    const documentsData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
-  
-    if (documentsData.length > 1) {
-      const documentTypeColumnIndex = documentsData[0].indexOf("documenttype");
-  
-      if (documentTypeColumnIndex !== -1) {
-        const counts = {};
-  
-        // Loop through rows and count occurrences of each DocumentType
-        documentsData.slice(1).forEach((row) => {
-          const documentType = row[documentTypeColumnIndex];
-          if (documentType) {
-            // Sum up the counts for the same document type
-            counts[documentType] = (counts[documentType] || 0) + 1;
-          }
-        });
-  
-        const labels = Object.keys(counts);  // Document types
-        const data = Object.values(counts);  // Count for each document type
-  
-        const ctx = document.getElementById("documentTypePieChart").getContext("2d");
-  
-        new Chart(ctx, {
-          type: "pie",
-          data: {
-            labels,  // Document types
-            datasets: [{
-              data,  // Count of each document type
-              backgroundColor: [
-                "rgba(54, 162, 235, 0.5)",
-                "rgba(255, 99, 132, 0.5)",
-                "rgba(75, 192, 192, 0.5)",
-                "rgba(153, 102, 255, 0.5)",
-                "rgba(255, 159, 64, 0.5)",
-              ],
-            }],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                display: false,  // Hide the legend
-              },
-            },
-          },
-        });
-      }
-    }
-  }
-  
-      
-        // Display counts for documents and equipments
-        function displayCounts() {
-          const documentData = JSON.parse(sessionStorage.getItem("documentsData") || "[]");
-          const equipmentData = JSON.parse(sessionStorage.getItem("equipmentsData") || "[]");
-      
-          const documentCount = documentData.length > 1 ? documentData.length - 1 : 0;
-          const equipmentCount = equipmentData.length > 1 ? equipmentData.length - 1 : 0;
-      
-          document.getElementById("documentCountDisplay").textContent = documentCount || 0;
-          document.getElementById("equipmentCountDisplay").textContent = equipmentCount || 0;
-        }
-      </script>
       
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>

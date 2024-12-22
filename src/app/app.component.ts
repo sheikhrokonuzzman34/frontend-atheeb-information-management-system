@@ -14,4 +14,5 @@ import { HeadbarComponent } from "./headbar/headbar.component";
 })
 export class AppComponent {
   title = 'AIMS-front';
+  
 }
