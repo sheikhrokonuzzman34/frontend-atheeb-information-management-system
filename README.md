@@ -1,6 +1,15 @@
-# AIMS(ATHEEB INFORMATION MANAGEMENT SYSTEM)
+# AIMS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+
+## Setting Up a Project
+Install the Angular CLI globally:
+
+npm install -g @angular/cli
+Create workspace:
+
+ng new [PROJECT NAME]
+Run the application:
 
 ## Development server
 
