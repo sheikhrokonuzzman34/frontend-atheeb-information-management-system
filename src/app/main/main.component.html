@@ -173,17 +173,17 @@
                         <ul class="user-badges list-unstyled row">
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn1.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>192</strong>
+                                <strong>{{ tagRelations.equipment || 0 }}</strong>
                                 <button class="btn btn-success btn-xs mt15">Equepment</button>
                             </li>
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn2.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>5K+</strong>
+                                <strong>{{ tagRelations.instruments || 0 }}</strong>
                                 <button class="btn btn-info btn-xs mt15">Instruments</button>
                             </li>
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn3.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>32</strong>
+                                <strong>{{ tagRelations.pipelines || 0 }}</strong>
                                 <button class="btn btn-primary btn-xs mt15">Pipelines</button>
                             </li>
                         </ul>
@@ -224,37 +224,37 @@
                             <!-- <i class="fa fa-file-o"></i> -->
                             <img src="../../assets/fonts/‌listicn1.svg" alt="">
                             <span class="text">File List</span>
-                            <span class="badge badge-xs badge-primary right">100</span>
+                            <span class="badge badge-xs badge-primary right">{{ overallLists.file_list || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/‌listicn2.svg" alt="">
                             <span class="text">Documents</span>
-                            <span class="badge badge-xs badge-info right">40+</span>
+                            <span class="badge badge-xs badge-info right">{{ overallLists.documents || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/list3.1.svg" alt="">
                             <span class="text">Tags</span>
-                            <span class="badge badge-xs badge-success right">22</span>
+                            <span class="badge badge-xs badge-success right">{{ overallLists.tags || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/‌listicn3.svg" alt="">
                             <span class="text">Tag Relation</span>
-                            <span class="badge badge-xs badge-danger right">80%</span>
+                            <span class="badge badge-xs badge-danger right">{{ overallLists.tag_relation || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/‌listicn4.svg" alt="">
                             <span class="text">Workflows</span>
-                            <span class="badge badge-xs badge-info circle right">5</span>
+                            <span class="badge badge-xs badge-info circle right">{{ overallLists.worflow || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/‌listicn5.svg" alt="">
                             <span class="text">Document Types</span>
-                            <span class="badge badge-xs circle badge-warning right">2</span>
+                            <span class="badge badge-xs circle badge-warning right">{{ overallLists.document_type || 0 }}</span>
                         </li>
                         <li>
                             <img src="../../assets/fonts/‌listicn6.svg" alt="">
                             <span class="text">Tag Types</span>
-                            <span class="badge badge-xs circle badge-danger right">8</span>
+                            <span class="badge badge-xs circle badge-danger right">{{ overallLists.tag_type || 0 }}</span>
                         </li>
                     </ul>
                 </div>
