@@ -173,17 +173,17 @@
                         <ul class="user-badges list-unstyled row">
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn1.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>{{ tagRelations.equipment || 0 }}</strong>
+                                <strong>{{ tagRelations.equipment | kFormat }}</strong>
                                 <button class="btn btn-success btn-xs mt15">Equepment</button>
                             </li>
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn2.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>{{ tagRelations.instruments || 0 }}</strong>
+                                <strong>{{ tagRelations.instruments | kFormat }}</strong>
                                 <button class="btn btn-info btn-xs mt15">Instruments</button>
                             </li>
                             <li class="col-xs-4">
                                 <img src="../../assets/fonts/TagRltn3.svg" alt="Tag Relation" class="icon-tagRelation"/>
-                                <strong>{{ tagRelations.pipelines || 0 }}</strong>
+                                <strong>{{ tagRelations.pipelines | kFormat }}</strong>
                                 <button class="btn btn-primary btn-xs mt15">Pipelines</button>
                             </li>
                         </ul>

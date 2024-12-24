@@ -4,12 +4,13 @@ import { FilecountService } from '../services/filecount.service';
 import { ChartService } from '../services/chart.service';
 import { TagRelationService } from '../services/tag-relation.service';
 import { OverallListsService } from '../services/overall-lists.service';
+import { KFormatPipe } from '../pipes/k-format.pipe';
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [KFormatPipe],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
