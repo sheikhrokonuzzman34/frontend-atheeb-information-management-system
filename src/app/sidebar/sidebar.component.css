@@ -1,67 +1,247 @@
-.user-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    padding-left: 20px;
-  }
+.main-container {
+  transition: all 0.3s ease;
+}
+
+.main-container.collapsed .nav-wrap {
+  width: 70px;
+  overflow: hidden;
+  padding-right: 18px; /* Add extra space on the right */
+
+}
+
+.main-container.collapsed .site-logo {
+  display: none;
+}
+
+/* .main-container.collapsed .profile,
+.main-container.collapsed .nav-list,
+.main-container.collapsed .nav-foot {
+  display: none;
+} */
+.main-container.collapsed .nav-list .text-tag,
+.main-container.collapsed .nav-list .text-data,
+.main-container.collapsed .nav-list .text-integration,
+.main-container.collapsed .nav-list .text-workflow,
+.main-container.collapsed .nav-list .text-admin,
+.main-container.collapsed .nav-list .text-help,
+.main-container.collapsed .nav-list .text-about {
+  transform: translateX(-100%); /* Slide text completely out of view */
+  opacity: 0; /* Hide text visually */
+  transition: all 0.3s ease;
+}
+
+/* Default (expanded) state for text */
+.nav-list .text-tag,
+.nav-list .text-data,
+.nav-list .text-integration,
+.nav-list .text-workflow,
+.nav-list .text-admin,
+.nav-list .text-help,
+.nav-list .text-about {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Adjust content margin during collapse */
+.main-container.collapsed ~ .content {
+  margin-left: 50px; /* Adjust to match collapsed sidebar width */
+}
+
+/* Adjust header margin during collapse */
+.main-container.collapsed ~ .site-head {
+  margin-left: 50px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding-left: 20px;
+}
 
 .user-name {
-    color: #464646;
-    font-size: 14px;
-    font-weight: 500;
-    padding-top: 6px;
-  }
-  
-  .user-role {
-    font-size: 12px;
-    font-weight: 400;
-    color: #464646;
-  }
+  color: #464646;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 6px;
+}
 
-  .icon {
-    margin-left: 15px;
-  }
+.user-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #464646;
+}
 
-  /* Reset default styles for list items */
+.icon {
+  margin-left: 15px;
+}
+
+/* Reset default styles for list items */
 .inner-drop li {
-    display: flex;
-    align-items: center; /* Vertically align icon and text */
-    padding: 2px 15px; /* Add spacing for items */
-  }
-  
-  /* Style for the icon */
-  .inner-drop li img.icon {
-    width: 16px; /* Fixed width for the icon */
-    height: 16px; /* Fixed height for the icon */
-    margin-left: 40px; /* Add space between icon and text */
-    flex-shrink: 0; /* Prevent icon from shrinking */
-  }
-  
-  /* Style for the anchor tag */
-  .inner-drop li a {
-    text-decoration: none;
-    color: #888888; /* Default text color */
-    font-size: 12px;
-    font-weight: 700;
-  }
-  
-  /* Optional hover effect for links */
-  .inner-drop li a:hover {
-    color: #000; /* Change text color on hover */
-  }
-  
-  /* Parent list styling */
-  .inner-drop {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Top-level menu styling */
-  .inner-drop > li {
-    padding: 5px 0; /* Add vertical spacing between items */
-  }
-  
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  padding: 2px 15px; /* Add spacing for items */
+}
+
+/* Style for the icon */
+.inner-drop li img.icon {
+  width: 16px; /* Fixed width for the icon */
+  height: 16px; /* Fixed height for the icon */
+  margin-left: 40px; /* Add space between icon and text */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Style for the anchor tag */
+.inner-drop li a {
+  text-decoration: none;
+  color: #888888; /* Default text color */
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Optional hover effect for links */
+.inner-drop li a:hover {
+  color: #000; /* Change text color on hover */
+}
+
+/* Parent list styling */
+.inner-drop {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* Top-level menu styling */
+.inner-drop > li {
+  padding: 5px 0; /* Add vertical spacing between items */
+}
+
+.text-tag {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-left: 22px;
+}
+
+.text-data {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-left: 26px;
+}
+
+.text-integration {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; 
+  margin-left: 23px;
+  /* padding : 7px 7px; */
+}
+
+.text-workflow {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; 
+  margin-left: 23px;
+  /* padding : 7px 7px; */
+}
+
+.text-admin {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; 
+  margin-left: 23px;
+  /* padding : 7px 7px; */
+}
+
+.text-help {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; 
+  margin-left: 23px;
+  /* padding : 7px 7px; */
+}
+
+.text-about {
+  color: #464646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18.86px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; 
+  margin-left: 23px;
+  /* padding : 7px 7px; */
+}
+
+.list-data {
+  height: 49px;
+  margin-top: 10px;
+}
+
+.list-integration {
+  height: 49px;
+  /* margin-top: 10px; */
+}
+
+.list-workflow {
+  height: 49px;
+  /* margin-top: 10px; */
+}
+
+.list-admin {
+  height: 49px;
+  /* margin-top: 10px; */
+}
+
+.list-help {
+  height: 49px;
+  /* margin-top: 10px; */
+}
+
+.list-about {
+  height: 49px;
+  /* margin-top: 10px; */
+}
   .text-tag {
     color: #464646;
     font-family: Roboto;

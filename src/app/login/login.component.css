@@ -1,0 +1,96 @@
+.container {
+    margin-top: 50px;
+    /* height: 454px; */
+}
+
+.form-body {
+    /* padding-top: 10px; */
+    width: 420px;
+    height: 454px;
+}
+
+.login-logo img {
+    margin-top: 25px;
+    width: 133px;
+    height: 50px;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #464646;
+}
+
+.login-form button {
+    padding-bottom: 5px;
+}
+
+.remember-pass {
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+
+.remember-pass label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #464646;
+}
+
+.remember-pass a {
+    color: #F65314;
+    font-weight: 400;
+    font-size: 11.9px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.form-control-feedback {
+    position: absolute;
+    right: 15px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #7CBB00;
+    border-color: #7CBB00;
+}
+
+.btn-success:hover {
+    background-color: #7cb342;
+    border-color: #7cb342;
+}
+
+.text-center a {
+    color: #03a9f4;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+.login-footer {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 11.9px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px; /* Adjust based on your logo size */
+    height: 24px; /* Adjust based on your logo size */
+  }

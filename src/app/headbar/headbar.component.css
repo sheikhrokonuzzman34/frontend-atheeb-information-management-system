@@ -4,7 +4,16 @@
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    transition: all 0.3s ease;
+    
+  }
+  
+  .main-container.collapsed ~ .site-head {
+    margin-left: 60px; /* Move the header left when the sidebar collapses */
+  }
+  
+  .site-head.collapsed {
+    margin-left: 60px; /* Adjust based on your sidebar width when collapsed */
   }
   
   .toolbar-left, .toolbar-right {
@@ -34,6 +43,8 @@
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 165px;
+    transition: margin-left 0.3s ease; /* Smooth transition for title movement */
+
   }
   
   .example-spacer {

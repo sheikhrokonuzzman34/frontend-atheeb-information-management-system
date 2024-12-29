@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,16 +9,17 @@ import {MatIconModule} from '@angular/material/icon';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent {
-  isCollapsed = true;
+export class SidebarComponent implements OnInit{
+  isCollapsed = false;
 
-  @HostListener('mouseenter')
-  onMouseEnter() {
-    this.isCollapsed = false;
-  }
+  constructor(private sidebarService: SharedService) {}
 
-  @HostListener('mouseleave')
-  onMouseLeave() {
-    this.isCollapsed = true;
+  ngOnInit() {
+    this.sidebarService.isCollapsed$.subscribe(isCollapsed => {
+      this.isCollapsed = isCollapsed;
+    });
   }
+  // toggleSidebar() {
+  //   this.isCollapsed = !this.isCollapsed;
+  // }
 }
