@@ -8,13 +8,18 @@
     
   }
   
-  .main-container.collapsed ~ .site-head {
-    margin-left: 60px; /* Move the header left when the sidebar collapses */
+  /* When sidebar is collapsed */
+  body.collapsed .site-head {
+    margin-left: 60px; /* Adjust header margin for collapsed state */
+  }
+
+  body.collapsed .title-container .title {
+    margin-left: 10px; /* Move the title closer to the left */
   }
   
-  .site-head.collapsed {
-    margin-left: 60px; /* Adjust based on your sidebar width when collapsed */
-  }
+  /* .site-head.collapsed {
+    margin-left: 60px;
+  } */
   
   .toolbar-left, .toolbar-right {
     display: flex;
@@ -38,14 +43,36 @@
     cursor: pointer;
   }
    */
+  /* .title-container .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-left: 165px;
+    transition: margin-left 0.3s ease; 
+
+  } */
   .title-container .title {
     font-size: 22px;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 165px;
-    transition: margin-left 0.3s ease; /* Smooth transition for title movement */
-
+    transition: margin-left 0.3s ease;
   }
+
+  .toolbar-left .nav-trigger {
+    font-size: 24px;
+    cursor: pointer;
+    transition: margin-left 0.3s ease; /* Smooth transition */
+  }
+
+  .title-container .title span {
+    padding-left: 10px;
+  }
+
+  .collapsed .title-container .title {
+      margin-left: 60px;
+  }
+
   
   .example-spacer {
     flex: 1;
@@ -61,21 +88,21 @@
 .notifyicon{
     height: 24px;
     width: 24px;
-    background: none; /* Ensure no background color */
-    border: none; /* Ensure no border */
+    background: none; 
+    border: none; 
 }
 
 .accounticon {
     height: 24px;
     width: 24px;
-    background: none; /* Ensure no background color */
-    border: none; /* Ensure no border */
+    background: none;
+    border: none;
 }
 
 .icon-button {
-    background: none; /* Ensure no background color */
-    border: none; /* Ensure no border */
-    padding: 0; /* Remove padding */
+    background: none; 
+    border: none; 
+    padding: 0; 
     cursor: pointer;
     padding: 4px;
   }

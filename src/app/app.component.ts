@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { MainComponent } from "./main/main.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { HeadbarComponent } from "./headbar/headbar.component";
+import { SharedService } from './services/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,9 @@ import { HeadbarComponent } from "./headbar/headbar.component";
 })
 export class AppComponent implements OnInit {
   showLayout = true;
+  // isCollapsed = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private sidebarService: SharedService) {
     // Listen to route changes
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -25,5 +27,9 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.sidebarService.isCollapsed$.subscribe(isCollapsed => {
+    //   this.isCollapsed = isCollapsed;
+    // });
+  }
 }

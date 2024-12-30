@@ -27,7 +27,23 @@
     background-color: #f9f9f9;
     box-sizing: border-box;
     padding-left: 40px;
+    /* height: 400px; */
     overflow: hidden;
+  }
+
+  #chartCanvas {
+    display: block;
+    margin: auto;
+  }
+
+  #lineChart {
+    display: block;
+    margin: auto;
+  }
+
+  #doughnutChart {
+    display: block;
+    margin: auto;
   }
 
   .chart-info {
@@ -155,31 +171,29 @@
   .list-widget .list-unstyled li .text {
     padding-left: 7px; 
   }
-
-
   
   .custom-margin-bottom {
     margin-bottom: 18px; /* Reduced bottom margin by 2px */
-}
+  }
 
-.chart-container {
+/* .chart-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     margin-top: 15px;
     padding: 0 15px;
-  }
+  } */
   
-  .chart-wrapper {
+  /* .chart-wrapper {
     width: 49%;
     text-align: center;
     flex-direction: column;
     gap: 10px;
     box-sizing: border-box;
-  }
+  } */
   
-  .chart-box {
+  /* .chart-box {
     width: 100%;
     border: 2px solid #ccc;
     border-radius: 2px;
@@ -188,41 +202,41 @@
     box-sizing: border-box;
     padding-left: 40px;
     overflow: hidden;
-  }
-
+  } */
+/* 
   .chart-info {
     position: absolute;
-    left: 20px; /* Position inside the box */
-    top: 63%; /* Center vertically */
-    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    left: 20px; 
+    top: 63%; 
+    transform: translateY(-50%) rotate(-90deg); 
     font-size: 12px;
     font-weight: 400;
     color: #000000;
     text-align: center;
-    white-space: nowrap; /* Prevent wrapping */
-    z-index: 1; /* Ensure it stays on top of the chart */
-    max-width: 100%; /* Prevent overflow */
-  }
+    white-space: nowrap; 
+    z-index: 1; 
+    max-width: 100%; 
+  } */
 
-  .chart-info2 {
+  /* .chart-info2 {
     position: absolute;
-    left: 565px; /* Position inside the box */
-    top: 63%; /* Center vertically */
-    transform: translateY(-50%) rotate(-90deg); /* Rotate and align along the y-axis */
+    left: 565px; 
+    top: 63%;
+    transform: translateY(-50%) rotate(-90deg); 
     font-size: 12px;
     font-weight: 400;
     color: #000000;
     text-align: center;
-    white-space: nowrap; /* Prevent wrapping */
-    z-index: 1; /* Ensure it stays on top of the chart */
-    max-width: 100%; /* Prevent overflow */
-  }
+    white-space: nowrap; 
+    z-index: 1;
+    max-width: 100%; 
+  } */
 
-  .chart-title2 {
+  /* .chart-title2 {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    white-space: nowrap; /* Ensure text doesn't wrap */
+    white-space: nowrap; 
   }
   
   .chart-label {
@@ -239,17 +253,17 @@
     font-weight: 400;
     line-height: 18.86px;
     padding-top: 10px;
-  }  
+  }   */
 
 
-.chart-header {
+/* .chart-header {
     display: flex;
-    justify-content: space-between; /* Align items side by side */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 10px 0;
-    border-bottom: 1px solid #ddd; /* Optional: Add a divider */
-  }
-
+    border-bottom: 1px solid #ddd; 
+  } */
+/* 
   .search-box {
     position: relative;
     display: flex;
@@ -257,10 +271,10 @@
   }
   
   .search-box input {
-    width: 250px; /* Set the desired width */
+    width: 250px; 
     height: 30px;
     padding: 8px 12px;
-    padding-right: 30px; /* Add padding to make space for the icon */
+    padding-right: 30px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
@@ -269,25 +283,25 @@
   }
   
   .search-box input:focus {
-    border-color: #007bff; /* Change border color on focus */
+    border-color: #007bff; 
   }
   
   .search-box .search-icon {
     position: absolute;
     right: 10px;
     color: #aaa;
-    pointer-events: none; /* Ensure the icon does not block input interactions */
+    pointer-events: none; 
   }
 
   .search-box .search-icon-tags {
     position: absolute;
     right: 10px;
     color: #aaa;
-    pointer-events: none; /* Ensure the icon does not block input interactions */
-  }
+    pointer-events: none; 
+  } */
  
-  .bar-chart-list select {
-    width: 180px; /* Adjust width as needed */
+  /* .bar-chart-list select {
+    width: 180px; 
     height: 30px;
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -314,7 +328,7 @@
 
   .list-widget .list-unstyled li .text {
     padding-left: 7px; 
-  }
+  } */
 
 /* Media Queries for Responsiveness */
 

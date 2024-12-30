@@ -117,15 +117,18 @@
                       <i class="fa fa-search search-icon"></i>
                     </div>
                     <div class="bar-chart-list p-2">
-                      <select>
-                        <option value="chart1">BAR CHART</option>
-                        <option value="chart2">BAR CHART 2</option>
-                        <option value="chart3">BAR CHART 3</option>
+                      <select [(ngModel)]="selectedChartType" (change)="onChartTypeChange()">
+                        <option value="barHorizontal">Horizontal Bar Chart</option>
+                        <option value="barVertical">Vertical Bar Chart</option>
+                        <option value="pie">Pie Chart</option>
+                        <option value="doughnut">Donut Chart</option>
+                        <option value="line">Line Chart</option>
                       </select>
                     </div>
                   </div>
                 <!-- <div class="chart-info">Documents</div> -->
-                <canvas id="barChart"></canvas>
+                <!-- <canvas id="barChart"></canvas> -->
+                <canvas id="chartCanvas"></canvas>
                 <div class="chart-label">Doc Type</div>
               </div>
             </div>
@@ -141,10 +144,12 @@
                       <i class="fa fa-search search-icon-tags"></i>
                     </div>
                     <div class="bar-chart-list p-2">
-                      <select>
-                        <option value="chart1">LINE CHART</option>
-                        <option value="chart2">LINE CHART 2</option>
-                        <option value="chart3">LINE CHART 3</option>
+                      <select [(ngModel)]="selectedLineChartType" (change)="onLineChartTypeChange()">
+                        <option value="barHorizontal">Horizontal Bar Chart</option>
+                        <option value="barVertical">Vertical Bar Chart</option>
+                        <option value="pie">Pie Chart</option>
+                        <option value="doughnut">Donut Chart</option>
+                        <option value="line">Line Chart</option>
                       </select>
                     </div>
                 </div>
@@ -156,7 +161,6 @@
           </div>
            
         <div class="row">
-
             <!-- profile -->
             <div class="col-md-4 col-sm-6">
                 <div class="panel panel-default mb20 panel-hovered profile-widget">
@@ -200,16 +204,17 @@
                               <span class="text">FILES</span>
                             </div>
                             <div class="bar-chart-list p-2">
-                              <select>
-                                <option value="chart1">DOUGHNUT CHART</option>
-                                <option value="chart2">DOUGHNUT CHART 2</option>
-                                <option value="chart3">DOUGHNUT CHART 3</option>
+                              <select [(ngModel)]="selectedDonutChartType" (change)="onDonutChartTypeChange()">
+                                <option value="barHorizontal">Horizontal Bar Chart</option>
+                                <option value="barVertical">Vertical Bar Chart</option>
+                                <option value="pie">Pie Chart</option>
+                                <option value="doughnut">Doughnut Chart</option>
+                                <option value="line">Line Chart</option>
                               </select>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body text-center">
-                        <!-- <div id="c3chartbrowsershare"></div> -->
                         <canvas id="doughnutChart"></canvas>
                     </div>
                 </div>

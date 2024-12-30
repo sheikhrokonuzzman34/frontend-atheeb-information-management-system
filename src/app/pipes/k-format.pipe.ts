@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class KFormatPipe implements PipeTransform {
 
-  transform(value: number): string {
+  transform(value: any): string {
     if (value >= 1000) {
       return (value / 1000).toFixed(value % 1000 === 0 ? 0 : 1) + 'k';
     }
