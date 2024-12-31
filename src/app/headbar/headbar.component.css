@@ -9,11 +9,11 @@
   }
   
   /* When sidebar is collapsed */
-  body.collapsed .site-head {
+  .main-container .collapsed .site-head {
     margin-left: 60px; /* Adjust header margin for collapsed state */
   }
 
-  body.collapsed .title-container .title {
+  .main-container .collapsed .title-container .title {
     margin-left: 10px; /* Move the title closer to the left */
   }
   
