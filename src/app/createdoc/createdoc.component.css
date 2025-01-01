@@ -1,0 +1,106 @@
+.doc-container {
+    max-width: 1660px;
+    height: 986px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .form-title {
+    margin-bottom: 20px;
+    color: #00A1F1;
+    font-weight: 500;
+    font-size: 32px;
+  }
+  
+  .doc-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    width: 792px;
+    height: 75px;
+  }
+  
+  .file-drop-area {
+    width: 792px;
+    height: 105px;
+    border: 2px dashed #0000005C;
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .file-message {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    /* margin-bottom: 5px; */
+    /* display: block; */
+    color: #777777;
+  }
+  
+  .file-support {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    /* margin: 0; */
+  }
+
+  /* Wrap the file message and support into a container for proper stacking */
+    .file-text-container {
+        display: flex;
+        flex-direction: column; /* Stack the message and support vertically */
+        gap: 5px; /* Space between message and support */
+    }
+  
+  .form-actions button {
+    margin: 0 10px;
+  }
+
+  .uploadfiletitle {
+    font-weight: 300;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #00000080;
+  }
+  
+  .btn {
+    width: 178px;
+    height: 36px;
+  }
+
+  .cancel-btn {
+    background-color: #F65314;
+    color: #fff;
+    /* font-weight: 400;
+    font-size: 20px; */
+  }
+
+  .reset-btn {
+    background-color: #FFBB00;
+    color: #fff;
+  }
+
+  .create-btn {
+    background-color: #7CBB00;
+    color: #fff;
+  }
+
+  .upload-icon {
+    color: #00A1F1;
+  }

@@ -1,0 +1,61 @@
+<div class="container-fluid doc-container">
+    <h1 class="text-center form-title">Create Document</h1>
+    <form class="doc-form">
+      <div class="form-group">
+        <!-- <label for="documentNumber">Document Number</label> -->
+        <input type="text" id="documentNumber" class="form-control" placeholder="Document Number">
+      </div>
+      <div class="form-group">
+        <!-- <label for="title">Title</label> -->
+        <input type="text" id="title" class="form-control" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <!-- <label for="revisions">Revisions</label> -->
+        <select id="revisions" class="form-control">
+          <option value="">Revisions</option>
+          <option value="revision1">Revision 1</option>
+          <option value="revision2">Revision 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <!-- <label for="discipline">Discipline</label> -->
+        <select id="discipline" class="form-control">
+          <option value="">Discipline</option>
+          <option value="discipline1">Discipline 1</option>
+          <option value="discipline2">Discipline 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <!-- <label for="documentType">Document Type</label> -->
+        <select id="documentType" class="form-control">
+          <option value="">Document type</option>
+          <option value="type1">Type 1</option>
+          <option value="type2">Type 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="uploadFiles" class="uploadfiletitle">Upload Files</label>
+        <div class="file-drop-area">
+            <div class="file-text-container">
+                <!-- <button>
+                    <img src="../../assets/fonts/uploadicn.svg" alt="">
+                </button> -->
+                <div class="upload-icon">
+                    <i class="fa fa-upload"></i>
+                    <!-- <img src="../../assets/fonts/uploadicn.svg" alt=""> -->
+                </div>
+                <span class="file-message">Drop Files Here</span>
+            </div>
+            <p class="file-support">
+                <span style="color: red;">*</span>File Supported: PDF, XLS, Docs, TXT
+            </p>
+        </div>
+      </div>
+      <div class="form-actions text-center" style="padding-top: 5px;">
+        <button type="button" class="btn cancel-btn">Cancel</button>
+        <button type="reset" class="btn reset-btn">Reset</button>
+        <button type="submit" class="btn create-btn">Create</button>
+      </div>
+    </form>
+  </div>
+  

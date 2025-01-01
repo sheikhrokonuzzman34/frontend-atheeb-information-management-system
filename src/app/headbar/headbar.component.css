@@ -7,15 +7,14 @@
     transition: all 0.3s ease;
     
   }
-  
-  /* When sidebar is collapsed */
-  .main-container .collapsed .site-head {
-    margin-left: 60px; /* Adjust header margin for collapsed state */
+
+ .collapsed .site-head {
+    padding-left: 35px; 
   }
 
-  .main-container .collapsed .title-container .title {
-    margin-left: 10px; /* Move the title closer to the left */
-  }
+  /* .main-container .collapsed .title-container .title {
+    margin-left: 10px; 
+  } */
   
   /* .site-head.collapsed {
     margin-left: 60px;
@@ -70,10 +69,11 @@
   }
 
   .collapsed .title-container .title {
-      margin-left: 60px;
+      /* margin-left: 60px; */
+      padding-left: 0; 
+      margin-left: 0; 
   }
 
-  
   .example-spacer {
     flex: 1;
   }
